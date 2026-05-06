@@ -11,10 +11,10 @@ export default function Footer() {
           {/* Brand & Mission */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
-              <div className="bg-primary p-2 rounded-lg">
+              <div className="bg-primary p-2 rounded-md">
                 <span className="text-white font-bold text-xl">F</span>
               </div>
-              <span className="text-2xl font-bold tracking-tight text-black">
+              <span className="text-2xl font-bold tracking-tight text-black uppercase">
                 OODI
               </span>
             </Link>
@@ -27,10 +27,10 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-xl font-bold">Useful Links</h3>
             <ul className="space-y-4">
-              <li><Link href="#" className="text-accent hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="#" className="text-accent hover:text-primary transition-colors">Events</Link></li>
-              <li><Link href="#" className="text-accent hover:text-primary transition-colors">Blogs</Link></li>
-              <li><Link href="#" className="text-accent hover:text-primary transition-colors">FAQ</Link></li>
+              <li><Link href="/about" className="text-accent hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/#services" className="text-accent hover:text-primary transition-colors">Services</Link></li>
+              <li><Link href="/contact" className="text-accent hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/#offers" className="text-accent hover:text-primary transition-colors">Special Offers</Link></li>
             </ul>
           </div>
 
@@ -38,10 +38,10 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-xl font-bold">Main Menu</h3>
             <ul className="space-y-4">
-              <li><Link href="#" className="text-accent hover:text-primary transition-colors">Home</Link></li>
-              <li><Link href="#" className="text-accent hover:text-primary transition-colors">Offers</Link></li>
-              <li><Link href="#" className="text-accent hover:text-primary transition-colors">Menus</Link></li>
-              <li><Link href="#" className="text-accent hover:text-primary transition-colors">Reservation</Link></li>
+              <li><Link href="/#home" className="text-accent hover:text-primary transition-colors">Home</Link></li>
+              <li><Link href="/menu" className="text-accent hover:text-primary transition-colors">Menus</Link></li>
+              <li><Link href="/contact" className="text-accent hover:text-primary transition-colors">Reservation</Link></li>
+              <li><Link href="/#offers" className="text-accent hover:text-primary transition-colors">Offers</Link></li>
             </ul>
           </div>
 
@@ -49,9 +49,9 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-xl font-bold">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="text-accent">example@gmail.com</li>
-              <li className="text-accent">+64 558 248 568</li>
-              <li className="text-accent">Social media</li>
+              <li className="text-accent">hello@foodi.com</li>
+              <li className="text-accent">+91 98765 43210</li>
+              <li className="text-accent">123 Foodi Street, North East</li>
             </ul>
           </div>
         </div>
