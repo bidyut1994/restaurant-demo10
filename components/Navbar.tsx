@@ -65,7 +65,7 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-4 py-6 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-1">
+          <Link href="/" prefetch={false} className="flex items-center gap-1">
             <div className="bg-primary py-1 px-2 rounded-md">
               <span className="text-white font-bold text-xl">F</span>
             </div>
@@ -80,6 +80,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
+                prefetch={false}
                 className={`font-semibold transition-all duration-300 ${
                   activeSection === link.id
                     ? "text-primary scale-110"
@@ -136,7 +137,7 @@ export default function Navbar() {
             >
               {/* Drawer Header */}
               <div className="p-8 flex items-center justify-between border-b border-zinc-100">
-                <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-1">
+                <Link href="/" prefetch={false} onClick={() => setIsOpen(false)} className="flex items-center gap-1">
                   <div className="bg-primary py-1 px-2 rounded-md">
                     <span className="text-white font-bold text-lg">F</span>
                   </div>
@@ -158,6 +159,7 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
+                    prefetch={false}
                     onClick={() => setIsOpen(false)}
                     className={`group flex items-center justify-between p-4 rounded-md transition-all ${
                       activeSection === link.id 

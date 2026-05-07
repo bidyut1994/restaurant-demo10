@@ -5,12 +5,20 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { FiSearch } from "react-icons/fi";
+import { BiPhoneCall } from "react-icons/bi";
+import { 
+  MdOutlineBreakfastDining, 
+  MdOutlineLunchDining, 
+  MdOutlineDinnerDining, 
+  MdOutlineLocalDrink 
+} from "react-icons/md";
 
 const menuCategories = [
-  { name: "Breakfast", count: "12 breakfast" },
-  { name: "Lunch", count: "16 dishes" },
-  { name: "Dinner", count: "18 dinner" },
-  { name: "Juice", count: "15 items" }
+  { name: "Breakfast", count: "12 breakfast", icon: MdOutlineBreakfastDining },
+  { name: "Lunch", count: "16 dishes", icon: MdOutlineLunchDining },
+  { name: "Dinner", count: "18 dinner", icon: MdOutlineDinnerDining },
+  { name: "Juice", count: "15 items", icon: MdOutlineLocalDrink }
 ];
 
 const menuItems = [
@@ -84,9 +92,6 @@ const menuItems = [
   { id: 61, title: "Lemon Mint", price: "90.00", category: "Juice" },
 ];
 
-import { FiSearch } from "react-icons/fi";
-import { BiPhoneCall } from "react-icons/bi";
-
 export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState("Breakfast");
   const [searchQuery, setSearchQuery] = useState("");
@@ -118,6 +123,7 @@ export default function MenuPage() {
                   <input 
                     type="text" 
                     placeholder="Search for a dish..." 
+                    value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-12 pr-4 py-3 rounded-md bg-white border border-zinc-200 focus:outline-none focus:border-primary transition-all text-sm shadow-sm"
                   />
@@ -126,17 +132,21 @@ export default function MenuPage() {
               </div>
 
               {/* Category Tabs */}
-              <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-8 border-b border-zinc-200 pb-8">
+              <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-8">
                 {menuCategories.map((cat) => (
                   <button
                     key={cat.name}
-                    onClick={() => setActiveCategory(cat.name)}
+                    onClick={() => {
+                      setActiveCategory(cat.name);
+                      setSearchQuery("");
+                    }}
                     className={`flex items-center gap-3 px-8 py-3 rounded-md transition-all duration-300 ${
                       activeCategory === cat.name
                         ? "bg-primary text-white shadow-lg shadow-primary/20 scale-105"
                         : "bg-white text-accent hover:bg-zinc-100 border border-zinc-100"
                     }`}
                   >
+                    <cat.icon className={`text-xl ${activeCategory === cat.name ? "text-white" : "text-primary"}`} />
                     <span className="font-bold text-sm tracking-wide uppercase">{cat.name}</span>
                   </button>
                 ))}

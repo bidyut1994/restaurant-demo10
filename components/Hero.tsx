@@ -33,6 +33,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center gap-6 justify-center md:justify-start">
             <Link 
               href="#menu"
+              prefetch={false}
               className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-xl shadow-primary/30"
             >
               Our Menu
@@ -97,11 +98,11 @@ export default function Hero() {
             <div className="absolute inset-0 bg-primary/20 rounded-full scale-105 -z-20" /> */}
 
             <Image
-              src="/hero-girl.png"
+              src="/hero-girl22.png"
               alt="Delicious Food"
               width={600}
               height={600}
-              className="object-contain drop-shadow-2xl"
+              className="object-contain "
               priority
             />
 

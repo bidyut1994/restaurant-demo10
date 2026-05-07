@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Brand & Mission */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" prefetch={false} className="flex items-center gap-2">
               <div className="bg-primary p-2 rounded-md">
                 <span className="text-white font-bold text-xl">F</span>
               </div>
@@ -27,10 +27,10 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-xl font-bold">Useful Links</h3>
             <ul className="space-y-4">
-              <li><Link href="/about" className="text-accent hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/#services" className="text-accent hover:text-primary transition-colors">Services</Link></li>
-              <li><Link href="/contact" className="text-accent hover:text-primary transition-colors">Contact</Link></li>
-              <li><Link href="/#offers" className="text-accent hover:text-primary transition-colors">Special Offers</Link></li>
+              <li><Link href="/about" prefetch={false} className="text-accent hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/#services" prefetch={false} className="text-accent hover:text-primary transition-colors">Services</Link></li>
+              <li><Link href="/contact" prefetch={false} className="text-accent hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/#offers" prefetch={false} className="text-accent hover:text-primary transition-colors">Special Offers</Link></li>
             </ul>
           </div>
 
@@ -38,10 +38,10 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-xl font-bold">Main Menu</h3>
             <ul className="space-y-4">
-              <li><Link href="/#home" className="text-accent hover:text-primary transition-colors">Home</Link></li>
-              <li><Link href="/menu" className="text-accent hover:text-primary transition-colors">Menus</Link></li>
-              <li><Link href="/contact" className="text-accent hover:text-primary transition-colors">Reservation</Link></li>
-              <li><Link href="/#offers" className="text-accent hover:text-primary transition-colors">Offers</Link></li>
+              <li><Link href="/#home" prefetch={false} className="text-accent hover:text-primary transition-colors">Home</Link></li>
+              <li><Link href="/menu" prefetch={false} className="text-accent hover:text-primary transition-colors">Menus</Link></li>
+              <li><Link href="/contact" prefetch={false} className="text-accent hover:text-primary transition-colors">Reservation</Link></li>
+              <li><Link href="/#offers" prefetch={false} className="text-accent hover:text-primary transition-colors">Offers</Link></li>
             </ul>
           </div>
 
