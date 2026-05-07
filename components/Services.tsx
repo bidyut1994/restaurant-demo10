@@ -61,24 +61,24 @@ export default function Services() {
         </motion.div>
 
         {/* Right Side: Service Cards */}
-        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="bg-white rounded-[30px] p-8 shadow-lg flex flex-col items-center text-center border border-gray-50 group hover:shadow-2xl transition-all"
+              whileHover={{ y: -8 }}
+              className="bg-white rounded-[2.5rem] p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] flex flex-col items-center text-center border border-zinc-50 group transition-all duration-300"
             >
-              <div className={`text-4xl ${service.color} mb-6 group-hover:scale-110 transition-transform`}>
+              <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-4xl mb-8 transition-all duration-500 bg-white shadow-[0_8px_20px_rgba(0,0,0,0.04)] group-hover:bg-primary group-hover:text-white ${service.color}`}>
                 {service.icon}
               </div>
-              <h3 className={`text-lg font-bold mb-3 ${service.color} tracking-widest`}>
+              <h3 className={`text-xl font-black mb-4 tracking-tight text-zinc-900 group-hover:text-primary transition-colors`}>
                 {service.title}
               </h3>
-              <p className="text-accent text-sm leading-relaxed">
+              <p className="text-zinc-400 text-sm font-medium leading-relaxed">
                 {service.description}
               </p>
             </motion.div>

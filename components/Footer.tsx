@@ -40,7 +40,6 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><Link href="/#home" prefetch={false} className="text-accent hover:text-primary transition-colors">Home</Link></li>
               <li><Link href="/menu" prefetch={false} className="text-accent hover:text-primary transition-colors">Menus</Link></li>
-              <li><Link href="/contact" prefetch={false} className="text-accent hover:text-primary transition-colors">Reservation</Link></li>
               <li><Link href="/#offers" prefetch={false} className="text-accent hover:text-primary transition-colors">Offers</Link></li>
             </ul>
           </div>
@@ -75,7 +74,7 @@ export default function Footer() {
              </Link>
           </div>
           <p className="text-accent text-sm">
-            Copyright © 2023 Dezcode | All rights reserved
+            Copyright © 2026 Pixelapp | All rights reserved
           </p>
         </div>
       </div>
